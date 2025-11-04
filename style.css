@@ -1,67 +1,67 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Boogaloo&family=Graduate&family=Rochester&display=swap'); */
 @font-face {
   font-family: "Agency";
-  src: url("/fonts/AGENCYR.TTF") format("truetype");
+  src: url("./fonts/AGENCYR.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Angel";
-  src: url("/fonts/Angel.ttf") format("truetype");
+  src: url("./fonts/Angel.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Agency";
-  src: url("/fonts/AGENCYR.TTF") format("truetype");
+  src: url("./fonts/AGENCYR.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Balista";
-  src: url("/fonts/Balista.ttf") format("truetype");
+  src: url("./fonts/Balista.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Barbie";
-  src: url("/fonts/Barbie.otf") format("opentype");
+  src: url("./fonts/Barbie.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Berkshire";
-  src: url("/fonts/berkshireswash-regular.ttf") format("truetype");
+  src: url("./fonts/berkshireswash-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Boogaloo";
-  src: url("/fonts/Boogaloo-Regular.otf") format("opentype");
+  src: url("./fonts/Boogaloo-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Dearheart";
-  src: url("/fonts/Dear-heart.ttf") format("truetype");
+  src: url("./fonts/Dear-heart.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Graduate";
-  src: url("/fonts/graduate-regular.ttf") format("truetype");
+  src: url("./fonts/graduate-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Joseph";
-  src: url("/fonts/Joseph Sophia.otf") format("opentype");
+  src: url("./fonts/Joseph Sophia.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Ostrich";
-  src: url("/fonts/OstrichSans-Bold.otf") format("opentype");
+  src: url("./fonts/OstrichSans-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
