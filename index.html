@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css?v=0.02">
+    <link rel="stylesheet" href="style.css?v=0.03">
   </head>
   <body>
     <header>
         <div class="flex justify-center p-4">
-            <span>Logo</span>
+            <img class="sp-logo" src="./img/logo.jpg" alt="logo icon">
         </div>
     </header>
     <div class="md:w-5xl w-full m-auto sp p-4">
@@ -77,7 +77,7 @@
                         </div>
                         <div class="sp-colors hidden" id="colorPickerMain" data-control="textMain"></div>
                         <div class="sp-fonts hidden" id="fontPickerMain" data-control="textMain"></div>
-                        <input class="sp-input" type="text" id="textMainInput">
+                        <input class="sp-input" type="text" id="textMainInput" placeholder="Enter your text">
                     </div>
                     <div  class="mb-5">
                         <div class="flex mb-2">
@@ -87,7 +87,7 @@
                         </div>
                         <div class="sp-colors hidden" id="colorPickerSecondary" data-control="textSecondary"></div>
                         <div class="sp-fonts hidden" id="fontPickerSecondary" data-control="textSecondary"></div>
-                        <input class="sp-input" type="text" id="textSecondaryInput">
+                        <input class="sp-input" type="text" placeholder="Enter your text" id="textSecondaryInput">
                     </div>
                     <div  class="mb-5">
                         <div class="flex flex-col mb-2">
@@ -100,6 +100,7 @@
                             <p class="me-auto" style="font-weight: 400;"><b>Please Note:</b> Edge of the sign has a 3D look with black color because of the laser cutting process</p>
                         </div>
                     </div>
+                    <a class="sp-btn-back" target="_blank" href="https://www.etsy.com/listing/4374486421/baby-name-sign-name-and-last-name-sign">Return to Etsy to Place Your Order</a>
                 </div>
             </div>
         </div>
@@ -166,7 +167,7 @@
                 const textId = document.getElementById(id).dataset.control;
                 const text = document.getElementById(textId)
                 circle.addEventListener("click", () => {
-                    const circles = document.querySelectorAll(".pick-text-color");
+                    const circles = document.querySelectorAll("#" + id+ " .pick-text-color");
                     circles.forEach(btn => btn.classList.remove("active"));
                     circle.classList.add("active");
                     text.style.color = hex
@@ -185,7 +186,7 @@
                 const textId = document.getElementById(id).dataset.control;
                 const text = document.getElementById(textId)
                 fontButton.addEventListener("click", () => {
-                    const fontButtons = document.querySelectorAll(".pick-text-font");
+                    const fontButtons = document.querySelectorAll("#" + id+ " .pick-text-font");
                     fontButtons.forEach(btn => btn.classList.remove("active"));
                     fontButton.classList.add("active");
                     text.classList.forEach(cls => {
@@ -200,11 +201,12 @@
         }
         function sizeList() {
             // const sizes = ['12" (30cm)','18" (45cm)','24" (60cm)','32" (80cm)','36" (92cm)','42" (107cm)','47" (120cm)','55" (140cm)','59" (150cm)']
-            const sizes = [12,18,24,32,36,42,47,55,59]
+            // const sizes = [12,18,24,32,36,42,47,55,59]
+            const sizes = [12,18,24,36,45,60]
             sizes.map((size, index) => {
                 const sizeButton = document.createElement("button");
                 sizeButton.className = "pick-text-size";
-                if(size === 59) {
+                if(size === 60) {
                     sizeButton.className += " active" 
                 }
                 sizeButton.innerHTML = size + '" ('+parseInt(size*2.54)+'cm)';
@@ -215,11 +217,11 @@
                     sizeButtons.forEach(btn => btn.classList.remove("active"));
                     sizeButton.classList.add("active");
                     textWrapper.classList.forEach(cls => {
-                        if (cls.startsWith("size-")) {
+                        if (cls.startsWith("sp-size-")) {
                             textWrapper.classList.remove(cls);
                         }
                     });
-                    textWrapper.classList.add("size-"+size);
+                    textWrapper.classList.add("sp-size-"+size);
                     const textMainInput = document.getElementById("textMainInput");
                     const textSecondaryInput = document.getElementById("textSecondaryInput");
                     fitTextToWidth(textWrapper, textMain, textSecondary)
@@ -228,14 +230,29 @@
             });
         }
         function pickerButtons () {
-            const buttons = document.querySelectorAll('.sp-btn-picker')
+            const buttons = document.querySelectorAll('.sp-btn-picker');
             buttons.forEach((button) => {
                 button.addEventListener('click', () => {
                     const control = button.dataset.control;
-                    button.classList.toggle("active");
-                    document.getElementById(control).classList.toggle("hidden");
-                })
-            })
+                    const target = document.getElementById(control);
+                    const isAlreadyOpen = !target.classList.contains('hidden');
+
+                    // Hide all panels and deactivate all buttons
+                    btns = button.parentNode.querySelectorAll('button')
+                    btns.forEach(btn => {
+                        document.getElementById(btn.dataset.control).classList.add('hidden');
+                        btn.classList.remove('active');
+                    });
+
+                    // If it was already open, stop here (so it stays closed)
+                    if (isAlreadyOpen) return;
+
+                    // Otherwise, open the clicked one
+                    target.classList.remove('hidden');
+                    button.classList.add('active');
+                });
+            });
+
         }
         function fitTextToWidth(container, textElement, sutTextElement) {
             let fontSize = 100; // start large
