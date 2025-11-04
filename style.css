@@ -67,25 +67,25 @@
 }
 @font-face {
   font-family: "Rochester";
-  src: url("../fonts/Rochester-73E4.ttf") format("truetype");
+  src: url("./fonts/Rochester-73E4.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Sophia";
-  src: url("../fonts/Sophia.ttf") format("truetype");
+  src: url("./fonts/Sophia.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Thick";
-  src: url("../fonts/Thick.otf") format("opentype");
+  src: url("./fonts/Thick.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Welcome";
-  src: url("../fonts/Welcome.ttf") format("truetype");
+  src: url("./fonts/Welcome.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
