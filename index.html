@@ -175,10 +175,10 @@
             }
         }
         function fontList(id) {
-            const fonts = ["graduate","boogaloo","berkshire","rochester"]
+            const fonts = ["Agency","Angel","Balista","Barbie","Boogaloo","Berkshire","Dearheart","Graduate","Joseph","Ostrich","Rochester","Sophia","Thick","Welcome"]
             fonts.map((name, index) => {
                 const fontButton = document.createElement("button");
-                fontButton.className = "pick-text-font font-"+name;
+                fontButton.className = "pick-text-font font-"+name.toLowerCase();
                 fontButton.innerHTML = name;
                 fontButton.title = name;
                 // fontButton.dataset.control = document.getElementById(id).dataset.control
@@ -193,7 +193,7 @@
                             text.classList.remove(cls);
                         }
                     });
-                    text.classList.add("font-"+name)}
+                    text.classList.add("font-"+name.toLowerCase())}
                 );
                 document.getElementById(id).appendChild(fontButton);
             });

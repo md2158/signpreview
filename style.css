@@ -1,23 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Boogaloo&family=Graduate&family=Rochester&display=swap');
-.font-graduate {
-  font-family: "Graduate", serif;
-  font-weight: 400;
+/* @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Boogaloo&family=Graduate&family=Rochester&display=swap'); */
+@font-face {
+  font-family: "Agency";
+  src: url("/fonts/AGENCYR.TTF") format("truetype");
+  font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: "Angel";
+  src: url("/fonts/Angel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Agency";
+  src: url("/fonts/AGENCYR.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Balista";
+  src: url("/fonts/Balista.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barbie";
+  src: url("/fonts/Barbie.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Berkshire";
+  src: url("/fonts/berkshireswash-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Boogaloo";
+  src: url("/fonts/Boogaloo-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dearheart";
+  src: url("/fonts/Dear-heart.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graduate";
+  src: url("/fonts/graduate-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Joseph";
+  src: url("/fonts/Joseph Sophia.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ostrich";
+  src: url("/fonts/OstrichSans-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rochester";
+  src: url("../fonts/Rochester-73E4.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sophia";
+  src: url("../fonts/Sophia.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thick";
+  src: url("../fonts/Thick.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Welcome";
+  src: url("../fonts/Welcome.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.font-agency {
+  font-family: "Agency", sans-serif;
+}
+.font-angel {
+  font-family: "Angel", cursive;
+}
+.font-balista {
+  font-family: "Balista", cursive;
+}
+.font-barbie {
+  font-family: "Barbie", cursive;
 }
 .font-boogaloo {
   font-family: "Boogaloo", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 .font-berkshire {
-  font-family: "Berkshire Swash", serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Berkshire", serif;
+}
+.font-dearheart {
+  font-family: "Dearheart", cursive;
+}
+.font-graduate {
+  font-family: "Graduate", serif;
+}
+.font-joseph {
+  font-family: "Joseph", cursive;
+}
+.font-ostrich {
+  font-family: "Ostrich", sans-serif;
 }
 .font-rochester {
   font-family: "Rochester", cursive;
-  font-weight: 400;
-  font-style: normal;
+}
+.font-sophia {
+  font-family: "Sophia", cursive;
+}
+.font-thick {
+  font-family: "Thick", cursive;
+}
+.font-welcome {
+  font-family: "Welcome", cursive;
 }
 .sp p {
     font-weight: 500;
