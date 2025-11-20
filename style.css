@@ -135,164 +135,182 @@
   font-family: "Welcome", cursive;
 }
 .sp-logo {
-    height: 5rem;
-    width: auto;
+  height: 5rem;
+  width: auto;
 }
 .sp p {
-    font-weight: 500;
-    line-height: 1.2;
-    /* margin-bottom: 0; */
+  font-weight: 500;
+  line-height: 1.2;
+  /* margin-bottom: 0; */
 }
 .sp-btn-picker {
-    position: relative;
-    line-height: 1.2;
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 0.1rem 1.4rem 0.1rem 0.6rem;
-    background-color: #f2f2f2;
-    margin-left: 0.5rem;
-    border-radius: 1rem;
-    cursor: pointer;
+  position: relative;
+  line-height: 1.2;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.1rem 1.4rem 0.1rem 0.6rem;
+  background-color: #f2f2f2;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 .sp-btn-picker:hover {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
 .sp-btn-picker.active {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
 .sp-btn-picker.active::after {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .sp-btn-picker::after {
-    content: url('./img/arrow.svg');
-    position: absolute;
-    top: 0;
-    right: 0.25rem;
-    bottom: 0;
-    left: auto;
-    height: 1rem;
-    width: 1rem;
-    margin: auto;
-    transition: all .3s ease-in-out;
+  content: url("./img/arrow.svg");
+  position: absolute;
+  top: 0;
+  right: 0.25rem;
+  bottom: 0;
+  left: auto;
+  height: 1rem;
+  width: 1rem;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
 }
 .sp-btn-back {
-    display: block;
-    background-color: #f1641e;
-    color: #ffffff;
-    width: 100%;
-    padding: 0.75rem;
-    line-height: 1;
-    text-align: center;
-    border-radius: 2rem;
+  display: block;
+  background-color: #f1641e;
+  color: #ffffff;
+  width: 100%;
+  padding: 0.75rem;
+  line-height: 1;
+  text-align: center;
+  border-radius: 2rem;
 }
 .sp-input {
-    border: 0.1rem solid #e1e1e1;
-    width: 100%;
-    height: 2rem;
-    padding: 0 0.5rem;
+  border: 0.1rem solid #e1e1e1;
+  width: 100%;
+  height: 2rem;
+  padding: 0 0.5rem;
 }
 .sp-main-image {
-    position: relative;
+  position: relative;
 }
 .sp-text {
-    position: absolute;
-    top: 10%;
-    right: 0;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 40%;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40%;
 }
 .sp-text__wrapper {
-    max-width: 69%;
-    /* width: 100%; */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  max-width: 69%;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .sp-size-12 {
-    max-width: 13.86%;
+  max-width: 13.86%;
 }
 .sp-size-18 {
-    max-width: 20.8%;
+  max-width: 20.8%;
 }
 .sp-size-24 {
-    max-width: 27.73%;
+  max-width: 27.73%;
 }
 /* .sp-size-32 {
     max-width: 18.9vw;
 } */
 .sp-size-36 {
-    max-width: 41.6%;
+  max-width: 41.6%;
 }
 /* .sp-size-42 {
     max-width: 24.8vw;
 } */
 .sp-size-45 {
-    max-width: 52%;
+  max-width: 52%;
 }
 /* .sp-size-55 {
     max-width: 29.8vw;
 } */
 .sp-size-60 {
-    max-width: 69%;
+  max-width: 69%;
 }
 .sp-text-main {
-    display: inline-block;
-    width: max-content;
-    line-height: 1;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  display: inline-block;
+  width: max-content;
+  line-height: 1;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
 }
 .sp-text-secondary {
-    line-height: 1;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+  line-height: 1;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
 }
 .sp-fonts,
 .sp-colors {
-    background-color: #f2f2f2;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
+  background-color: #f2f2f2;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
 }
 .sp-colors button {
-    height: 2rem;
-    width: 2rem;
-    margin: 0.4rem;
-    border: 0.05rem solid #b4b4b4;
-    cursor: pointer;
+  height: 1.8rem;
+  width: 1.8rem;
+  /* margin: 0.4rem; */
+  border: 0.05rem solid #b4b4b4;
+  cursor: pointer;
+}
+.sp-colors .color-wrapper,
+.sp-fonts .font-wrapper {
+  margin: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+}
+.sp-colors .color-wrapper span,
+.sp-fonts .font-wrapper span {
+  padding: 0 0.2rem;
+  height: 1.8rem;
+  /* border: 0.05rem solid #b4b4b4; */
+  border-right-width: 0;
+  /* background-color: #ffffff; */
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
 }
 .sp-fonts button {
-    padding: 0.2rem 0.5rem;
-    margin: 0.4rem;
-    border: 0.05rem solid #b4b4b4;
-    cursor: pointer;
-    font-size: 1.4rem;
-    line-height: 1;
-    background-color: #ffffff;
-    color: #6b6b6b;
+  padding: 0.2rem 0.5rem;
+  border: 0.05rem solid #b4b4b4;
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1;
+  background-color: #ffffff;
+  color: #6b6b6b;
+  margin: 0;
+  height: 1.8rem;
 }
 .sp-sizes {
-    margin: 0 -0.4rem;
+  margin: 0 -0.4rem;
 }
 .sp-sizes button {
-    padding: 0.4rem 0.5rem;
-    margin: 0.4rem;
-    border: 0.05rem solid #b4b4b4;
-    cursor: pointer;
-    line-height: 1;
-    color: #6b6b6b;
+  padding: 0.4rem 0.5rem;
+  margin: 0.4rem;
+  border: 0.05rem solid #b4b4b4;
+  cursor: pointer;
+  line-height: 1;
+  color: #6b6b6b;
 }
 .sp-fonts button.active,
 .sp-sizes button.active {
-    color: #000000;
-    border-color: #ffd500;
-    background-color: #ffd500;
+  color: #000000;
+  border-color: #ffd500;
+  background-color: #ffd500;
 }
 .sp-colors button.active {
-    border-color: #ffffff;
-    outline: 0.2rem solid #000000;
+  border-color: #ffffff;
+  outline: 0.2rem solid #000000;
 }

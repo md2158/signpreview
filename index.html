@@ -1,279 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css?v=0.04">
+    <link rel="stylesheet" href="style.css?v=0.05" />
   </head>
   <body>
     <header>
-        <div class="flex justify-center p-4">
-            <img class="sp-logo" src="./img/logo.jpg" alt="logo icon">
-        </div>
+      <div class="flex justify-center p-4">
+        <img class="sp-logo" src="./img/logo.jpg" alt="logo icon" />
+      </div>
     </header>
     <div class="md:w-5xl w-full m-auto sp p-4">
-        <div class="flex flex-wrap">
-            <div class="md:basis-7/12 basis-1/1">
-                <div class="mx-auto flex flex-col items-start">
-                    <!-- Main image -->
-                    <div class="sp-main-image w-full aspect-[4/3] overflow-hidden rounded-2xl shadow-md">
-                        <img
-                            id="mainImage"
-                            src="./img/wall-rainbow.png"
-                            alt="Main Image"
-                            class="w-full h-full object-cover object-top transition-all duration-300"
-                        />
-                        <div class="sp-text">
-                            <div class="sp-text__wrapper" id="textWrapper">
-                                <span class="sp-text-main" id="textMain"></span>
-                                <span class="sp-text-secondary" id="textSecondary"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Thumbnails -->
-                    <div class="flex gap-3 mt-4 items-start">
-                        <button
-                            class="cursor-pointer thumb w-1/3 aspect-[4/3] overflow-hidden rounded-xl border-2 border-transparent hover:opacity-80 transition"
-                            data-img="./img/wall-rainbow.png"
-                        >
-                        <img
-                            src="./img/wall-rainbow.png"
-                            alt="Rainbow Wall"
-                            class="w-full h-full object-cover object-top"
-                        />
-                        </button>
-                        <button
-                            class="cursor-pointer thumb w-1/3 aspect-[4/3] overflow-hidden rounded-xl border-2 border-transparent hover:opacity-80 transition"
-                            data-img="./img/wall-light.png"
-                        >
-                            <img
-                                src="./img/wall-light.png"
-                                alt="Light Wall"
-                                class="w-full h-full object-cover object-top"
-                            />
-                        </button>
-                        <button
-                            class="cursor-pointer thumb w-1/3 aspect-[4/3] overflow-hidden rounded-xl border-2 border-transparent hover:opacity-80 transition"
-                            data-img="./img/wall-dark.png"
-                        >
-                            <img
-                                src="./img/wall-dark.png"
-                                alt="Dark Wall"
-                                class="w-full h-full object-cover object-top"
-                            />
-                        </button>
-                    </div>
+      <div class="flex flex-wrap">
+        <div class="md:basis-7/12 basis-1/1">
+          <div class="mx-auto flex flex-col items-start">
+            <!-- Main image -->
+            <div
+              class="sp-main-image w-full aspect-[4/3] overflow-hidden rounded-2xl shadow-md"
+            >
+              <img
+                id="mainImage"
+                src="./img/wall-rainbow.png"
+                alt="Main Image"
+                class="w-full h-full object-cover object-top transition-all duration-300"
+              />
+              <div class="sp-text">
+                <div class="sp-text__wrapper" id="textWrapper">
+                  <span class="sp-text-main" id="textMain"></span>
+                  <span class="sp-text-secondary" id="textSecondary"></span>
                 </div>
+              </div>
             </div>
-            <div class="md:basis-5/12 basis-1/1">
-                <div class="py-2 md:px-4 px-0">
-                    <p class="mb-3">Please enter the text you want to customize below.</p>
-                    <div class="mb-5">
-                        <div class="flex mb-2">
-                            <p class="me-auto">Line 1</p>
-                            <button class="sp-btn-picker" id="viewFontsMain" data-control="fontPickerMain">Font</button>
-                            <button class="sp-btn-picker" id="viewColorsMain" data-control="colorPickerMain">Color</button>
-                        </div>
-                        <div class="sp-colors hidden" id="colorPickerMain" data-control="textMain"></div>
-                        <div class="sp-fonts hidden" id="fontPickerMain" data-control="textMain"></div>
-                        <input class="sp-input" type="text" id="textMainInput" placeholder="Enter your text">
-                    </div>
-                    <div  class="mb-5">
-                        <div class="flex mb-2">
-                            <p class="me-auto">Line 2</p>
-                            <button class="sp-btn-picker" id="viewFontssSecondary" data-control="fontPickerSecondary">Font</button>
-                            <button class="sp-btn-picker" id="viewColorsSecondary" data-control="colorPickerSecondary">Color</button>
-                        </div>
-                        <div class="sp-colors hidden" id="colorPickerSecondary" data-control="textSecondary"></div>
-                        <div class="sp-fonts hidden" id="fontPickerSecondary" data-control="textSecondary"></div>
-                        <input class="sp-input" type="text" placeholder="Enter your text" id="textSecondaryInput">
-                    </div>
-                    <div  class="mb-5">
-                        <div class="flex flex-col mb-2">
-                            <p class="me-auto mb-1">Choose a size below</p>
-                            <div class="sp-sizes" id="sizePicker"></div>
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <div class="flex flex-col mb-2 py-2 px-3 bg-yellow-100">
-                            <p class="me-auto" style="font-weight: 400;"><b>Please Note:</b> Edge of the sign has a 3D look with black color because of the laser cutting process</p>
-                        </div>
-                    </div>
-                    <a class="sp-btn-back" target="_blank" href="https://www.etsy.com/listing/4374486421/baby-name-sign-name-and-last-name-sign">Return to Etsy to Place Your Order</a>
-                </div>
+            <!-- Thumbnails -->
+            <div class="flex gap-3 mt-4 items-start">
+              <button
+                class="cursor-pointer thumb w-1/3 aspect-[4/3] overflow-hidden rounded-xl border-2 border-transparent hover:opacity-80 transition"
+                data-img="./img/wall-rainbow.png"
+              >
+                <img
+                  src="./img/wall-rainbow.png"
+                  alt="Rainbow Wall"
+                  class="w-full h-full object-cover object-top"
+                />
+              </button>
+              <button
+                class="cursor-pointer thumb w-1/3 aspect-[4/3] overflow-hidden rounded-xl border-2 border-transparent hover:opacity-80 transition"
+                data-img="./img/wall-light.png"
+              >
+                <img
+                  src="./img/wall-light.png"
+                  alt="Light Wall"
+                  class="w-full h-full object-cover object-top"
+                />
+              </button>
+              <button
+                class="cursor-pointer thumb w-1/3 aspect-[4/3] overflow-hidden rounded-xl border-2 border-transparent hover:opacity-80 transition"
+                data-img="./img/wall-dark.png"
+              >
+                <img
+                  src="./img/wall-dark.png"
+                  alt="Dark Wall"
+                  class="w-full h-full object-cover object-top"
+                />
+              </button>
             </div>
+          </div>
         </div>
+        <div class="md:basis-5/12 basis-1/1">
+          <div class="py-2 md:px-4 px-0">
+            <p class="mb-3">
+              Please enter the text you want to customize below.
+            </p>
+            <div class="mb-5">
+              <div class="flex mb-2">
+                <p class="me-auto">Line 1</p>
+                <button
+                  class="sp-btn-picker"
+                  id="viewFontsMain"
+                  data-control="fontPickerMain"
+                >
+                  Font
+                </button>
+                <button
+                  class="sp-btn-picker"
+                  id="viewColorsMain"
+                  data-control="colorPickerMain"
+                >
+                  Color
+                </button>
+              </div>
+              <div
+                class="sp-colors hidden"
+                id="colorPickerMain"
+                data-control="textMain"
+              ></div>
+              <div
+                class="sp-fonts hidden"
+                id="fontPickerMain"
+                data-control="textMain"
+              ></div>
+              <input
+                class="sp-input"
+                type="text"
+                id="textMainInput"
+                placeholder="Enter your text"
+              />
+            </div>
+            <div class="mb-5">
+              <div class="flex mb-2">
+                <p class="me-auto">Line 2</p>
+                <button
+                  class="sp-btn-picker"
+                  id="viewFontssSecondary"
+                  data-control="fontPickerSecondary"
+                >
+                  Font
+                </button>
+                <button
+                  class="sp-btn-picker"
+                  id="viewColorsSecondary"
+                  data-control="colorPickerSecondary"
+                >
+                  Color
+                </button>
+              </div>
+              <div
+                class="sp-colors hidden"
+                id="colorPickerSecondary"
+                data-control="textSecondary"
+              ></div>
+              <div
+                class="sp-fonts hidden"
+                id="fontPickerSecondary"
+                data-control="textSecondary"
+              ></div>
+              <input
+                class="sp-input"
+                type="text"
+                placeholder="Enter your text"
+                id="textSecondaryInput"
+              />
+            </div>
+            <div class="mb-5">
+              <div class="flex flex-col mb-2">
+                <p class="me-auto mb-1">Choose a size below</p>
+                <div class="sp-sizes" id="sizePicker"></div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <div class="flex flex-col mb-2 py-2 px-3 bg-yellow-100">
+                <p class="me-auto" style="font-weight: 400">
+                  <b>Please Note:</b> Edge of the sign has a 3D look with black
+                  color because of the laser cutting process
+                </p>
+              </div>
+            </div>
+            <a
+              class="sp-btn-back"
+              target="_blank"
+              href="https://www.etsy.com/listing/4374486421/baby-name-sign-name-and-last-name-sign"
+              >Return to Etsy to Place Your Order</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
     <script>
-        function imagePreview() {
-            const mainImage = document.getElementById("mainImage");
-            const thumbs = document.querySelectorAll(".thumb");
+      function imagePreview() {
+        const mainImage = document.getElementById("mainImage");
+        const thumbs = document.querySelectorAll(".thumb");
 
-            thumbs.forEach((thumb) => {
-                thumb.addEventListener("click", () => {
-                // Update main image
-                mainImage.src = thumb.dataset.img;
+        thumbs.forEach((thumb) => {
+          thumb.addEventListener("click", () => {
+            // Update main image
+            mainImage.src = thumb.dataset.img;
 
-                // Reset thumbnail styles
-                thumbs.forEach((t) => t.classList.remove("border-blue-500", "opacity-40"));
+            // Reset thumbnail styles
+            thumbs.forEach((t) =>
+              t.classList.remove("border-blue-500", "opacity-40")
+            );
 
-                // Highlight selected thumbnail
-                thumb.classList.add("border-blue-500", "opacity-40");
-                });
-            });
+            // Highlight selected thumbnail
+            thumb.classList.add("border-blue-500", "opacity-40");
+          });
+        });
 
-            // Set first thumbnail as selected by default
-            thumbs[0].classList.add("border-blue-500", "opacity-40");
+        // Set first thumbnail as selected by default
+        thumbs[0].classList.add("border-blue-500", "opacity-40");
+      }
+      function textInput() {
+        const textMainInput = document.getElementById("textMainInput");
+        const textSecondaryInput =
+          document.getElementById("textSecondaryInput");
+        const textMain = document.getElementById("textMain");
+        const textSecondary = document.getElementById("textSecondary");
+        textMainInput.addEventListener("input", (event) => {
+          textMain.textContent = event.target.value;
+          fitTextToWidth(textMain.parentNode, textMain, textSecondary);
+        });
+        textSecondaryInput.addEventListener("input", (event) => {
+          textSecondary.textContent = event.target.value;
+        });
+      }
+      function colorList(id) {
+        const colors = {
+          navy: "#1E3A8A",
+          blue: "#3B82F6",
+          purple: "#8B5CF6",
+          lavender: "#C4B5FD",
+          turquoise: "#14B8A6",
+          golden: "#FBBF24",
+          walnut: "#6B4F4F",
+          mellow: "#FCD34D",
+          ash: "#D1D5DB",
+          "dusty pink": "#ECA6AD",
+          beige: "#F5F5DC",
+          terracotta: "#E2725B",
+          olive: "#708238",
+          army: "#4B5320",
+          black: "#000000",
+          white: "#FFFFFF",
+        };
+        let index = 0;
+        for (const [name, hex] of Object.entries(colors)) {
+          index++;
+          const circle = document.createElement("button");
+          circle.className = "pick-text-color";
+          circle.style.backgroundColor = hex;
+          circle.title = name;
+          // circle.dataset.control = document.getElementById(id).dataset.control;
+          const textId = document.getElementById(id).dataset.control;
+          const text = document.getElementById(textId);
+          circle.addEventListener("click", () => {
+            const circles = document.querySelectorAll(
+              "#" + id + " .pick-text-color"
+            );
+            circles.forEach((btn) => btn.classList.remove("active"));
+            circle.classList.add("active");
+            text.style.color = hex;
+          });
+          const wrapperDiv = document.createElement("div");
+          wrapperDiv.className = "color-wrapper";
+          const numSpan = document.createElement("span");
+          numSpan.textContent = index;
+          wrapperDiv.appendChild(numSpan);
+          wrapperDiv.appendChild(circle);
+          document.getElementById(id).appendChild(wrapperDiv);
         }
-        function textInput() {
+      }
+      function fontList(id) {
+        const fonts = [
+          "Agency",
+          "Allison",
+          "Angel",
+          "Balista",
+          "Barbie",
+          "Boogaloo",
+          "Berkshire",
+          "Dearheart",
+          "Graduate",
+          "Joseph",
+          "Ostrich",
+          "Rochester",
+          "Sophia",
+          "Thick",
+          "Welcome",
+        ];
+        fonts.map((name, index) => {
+          const fontButton = document.createElement("button");
+          fontButton.className = "pick-text-font font-" + name.toLowerCase();
+          fontButton.innerHTML = name;
+          fontButton.title = name;
+          // fontButton.dataset.control = document.getElementById(id).dataset.control
+          const textId = document.getElementById(id).dataset.control;
+          const text = document.getElementById(textId);
+          fontButton.addEventListener("click", () => {
+            const fontButtons = document.querySelectorAll(
+              "#" + id + " .pick-text-font"
+            );
+            fontButtons.forEach((btn) => btn.classList.remove("active"));
+            fontButton.classList.add("active");
+            text.classList.forEach((cls) => {
+              if (cls.startsWith("font-")) {
+                text.classList.remove(cls);
+              }
+            });
+            text.classList.add("font-" + name.toLowerCase());
+          });
+          const wrapperDiv = document.createElement("div");
+          wrapperDiv.className = "font-wrapper";
+          const numSpan = document.createElement("span");
+          numSpan.textContent = index + 1;
+          wrapperDiv.appendChild(numSpan);
+          wrapperDiv.appendChild(fontButton);
+          document.getElementById(id).appendChild(wrapperDiv);
+        });
+      }
+      function sizeList() {
+        // const sizes = ['12" (30cm)','18" (45cm)','24" (60cm)','32" (80cm)','36" (92cm)','42" (107cm)','47" (120cm)','55" (140cm)','59" (150cm)']
+        // const sizes = [12,18,24,32,36,42,47,55,59]
+        const sizes = [12, 18, 24, 36, 45, 60];
+        sizes.map((size, index) => {
+          const sizeButton = document.createElement("button");
+          sizeButton.className = "pick-text-size";
+          if (size === 60) {
+            sizeButton.className += " active";
+          }
+          sizeButton.innerHTML = size + '" (' + parseInt(size * 2.54) + "cm)";
+          sizeButton.title = size + '"';
+          const textWrapper = document.getElementById("textWrapper");
+          sizeButton.addEventListener("click", () => {
+            const sizeButtons = document.querySelectorAll(".pick-text-size");
+            sizeButtons.forEach((btn) => btn.classList.remove("active"));
+            sizeButton.classList.add("active");
+            textWrapper.classList.forEach((cls) => {
+              if (cls.startsWith("sp-size-")) {
+                textWrapper.classList.remove(cls);
+              }
+            });
+            textWrapper.classList.add("sp-size-" + size);
             const textMainInput = document.getElementById("textMainInput");
-            const textSecondaryInput = document.getElementById("textSecondaryInput");
-            const textMain = document.getElementById("textMain");
-            const textSecondary = document.getElementById("textSecondary");
-            textMainInput.addEventListener("input", (event) => {
-                textMain.textContent = event.target.value;
-                fitTextToWidth(textMain.parentNode, textMain, textSecondary)
-            });
-            textSecondaryInput.addEventListener("input", (event) => {
-                textSecondary.textContent = event.target.value;
-            });
-        }
-        function colorList(id) {
-            const colors = {
-                navy: "#1E3A8A",
-                blue: "#3B82F6",
-                purple: "#8B5CF6",
-                lavender: "#C4B5FD",
-                turquoise: "#14B8A6",
-                golden: "#FBBF24",
-                walnut: "#6B4F4F",
-                mellow: "#FCD34D",
-                ash: "#D1D5DB",
-                "dusty pink": "#ECA6AD",
-                beige: "#F5F5DC",
-                terracotta: "#E2725B",
-                olive: "#708238",
-                army: "#4B5320",
-                black: "#000000",
-                white: "#FFFFFF",
-            };
-            for (const [name, hex] of Object.entries(colors)) {
-                const circle = document.createElement("button");
-                circle.className = "pick-text-color";
-                circle.style.backgroundColor = hex;
-                circle.title = name;
-                // circle.dataset.control = document.getElementById(id).dataset.control;
-                const textId = document.getElementById(id).dataset.control;
-                const text = document.getElementById(textId)
-                circle.addEventListener("click", () => {
-                    const circles = document.querySelectorAll("#" + id+ " .pick-text-color");
-                    circles.forEach(btn => btn.classList.remove("active"));
-                    circle.classList.add("active");
-                    text.style.color = hex
-                });
-                document.getElementById(id).appendChild(circle);
-            }
-        }
-        function fontList(id) {
-            const fonts = ["Agency","Allison","Angel","Balista","Barbie","Boogaloo","Berkshire","Dearheart","Graduate","Joseph","Ostrich","Rochester","Sophia","Thick","Welcome"]
-            fonts.map((name, index) => {
-                const fontButton = document.createElement("button");
-                fontButton.className = "pick-text-font font-"+name.toLowerCase();
-                fontButton.innerHTML = name;
-                fontButton.title = name;
-                // fontButton.dataset.control = document.getElementById(id).dataset.control
-                const textId = document.getElementById(id).dataset.control;
-                const text = document.getElementById(textId)
-                fontButton.addEventListener("click", () => {
-                    const fontButtons = document.querySelectorAll("#" + id+ " .pick-text-font");
-                    fontButtons.forEach(btn => btn.classList.remove("active"));
-                    fontButton.classList.add("active");
-                    text.classList.forEach(cls => {
-                        if (cls.startsWith("font-")) {
-                            text.classList.remove(cls);
-                        }
-                    });
-                    text.classList.add("font-"+name.toLowerCase())}
-                );
-                document.getElementById(id).appendChild(fontButton);
-            });
-        }
-        function sizeList() {
-            // const sizes = ['12" (30cm)','18" (45cm)','24" (60cm)','32" (80cm)','36" (92cm)','42" (107cm)','47" (120cm)','55" (140cm)','59" (150cm)']
-            // const sizes = [12,18,24,32,36,42,47,55,59]
-            const sizes = [12,18,24,36,45,60]
-            sizes.map((size, index) => {
-                const sizeButton = document.createElement("button");
-                sizeButton.className = "pick-text-size";
-                if(size === 60) {
-                    sizeButton.className += " active" 
-                }
-                sizeButton.innerHTML = size + '" ('+parseInt(size*2.54)+'cm)';
-                sizeButton.title = size + '"';
-                const textWrapper = document.getElementById("textWrapper")
-                sizeButton.addEventListener("click", () => {
-                    const sizeButtons = document.querySelectorAll(".pick-text-size");
-                    sizeButtons.forEach(btn => btn.classList.remove("active"));
-                    sizeButton.classList.add("active");
-                    textWrapper.classList.forEach(cls => {
-                        if (cls.startsWith("sp-size-")) {
-                            textWrapper.classList.remove(cls);
-                        }
-                    });
-                    textWrapper.classList.add("sp-size-"+size);
-                    const textMainInput = document.getElementById("textMainInput");
-                    const textSecondaryInput = document.getElementById("textSecondaryInput");
-                    fitTextToWidth(textWrapper, textMain, textSecondary)
-                });
-                document.getElementById("sizePicker").appendChild(sizeButton);
-            });
-        }
-        function pickerButtons () {
-            const buttons = document.querySelectorAll('.sp-btn-picker');
-            buttons.forEach((button) => {
-                button.addEventListener('click', () => {
-                    const control = button.dataset.control;
-                    const target = document.getElementById(control);
-                    const isAlreadyOpen = !target.classList.contains('hidden');
+            const textSecondaryInput =
+              document.getElementById("textSecondaryInput");
+            fitTextToWidth(textWrapper, textMain, textSecondary);
+          });
+          document.getElementById("sizePicker").appendChild(sizeButton);
+        });
+      }
+      function pickerButtons() {
+        const buttons = document.querySelectorAll(".sp-btn-picker");
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const control = button.dataset.control;
+            const target = document.getElementById(control);
+            const isAlreadyOpen = !target.classList.contains("hidden");
 
-                    // Hide all panels and deactivate all buttons
-                    btns = button.parentNode.querySelectorAll('button')
-                    btns.forEach(btn => {
-                        document.getElementById(btn.dataset.control).classList.add('hidden');
-                        btn.classList.remove('active');
-                    });
-
-                    // If it was already open, stop here (so it stays closed)
-                    if (isAlreadyOpen) return;
-
-                    // Otherwise, open the clicked one
-                    target.classList.remove('hidden');
-                    button.classList.add('active');
-                });
+            // Hide all panels and deactivate all buttons
+            btns = button.parentNode.querySelectorAll("button");
+            btns.forEach((btn) => {
+              document
+                .getElementById(btn.dataset.control)
+                .classList.add("hidden");
+              btn.classList.remove("active");
             });
 
+            // If it was already open, stop here (so it stays closed)
+            if (isAlreadyOpen) return;
+
+            // Otherwise, open the clicked one
+            target.classList.remove("hidden");
+            button.classList.add("active");
+          });
+        });
+      }
+      function fitTextToWidth(container, textElement, sutTextElement) {
+        let fontSize = 100; // start large
+        textElement.style.fontSize = fontSize + "px";
+        sutTextElement.style.fontSize = fontSize / 2 + "px";
+        while (
+          textElement.scrollWidth > container.clientWidth &&
+          fontSize > 5
+        ) {
+          fontSize -= 1;
+          textElement.style.fontSize = fontSize + "px";
+          sutTextElement.style.fontSize = fontSize / 2 + "px";
         }
-        function fitTextToWidth(container, textElement, sutTextElement) {
-            let fontSize = 100; // start large
-            textElement.style.fontSize = fontSize + "px";
-            sutTextElement.style.fontSize = fontSize/2 + "px";
-            while (textElement.scrollWidth > container.clientWidth && fontSize > 5) {
-                fontSize -= 1;
-                textElement.style.fontSize = fontSize + "px";
-                sutTextElement.style.fontSize = fontSize/2 + "px";
-            }
-        }
-        imagePreview()
-        textInput()
-        colorList("colorPickerMain")
-        colorList("colorPickerSecondary")
-        fontList("fontPickerMain")
-        fontList("fontPickerSecondary")
-        sizeList()
-        pickerButtons()
-        
-   </script>
+      }
+      imagePreview();
+      textInput();
+      colorList("colorPickerMain");
+      colorList("colorPickerSecondary");
+      fontList("fontPickerMain");
+      fontList("fontPickerSecondary");
+      sizeList();
+      pickerButtons();
+    </script>
   </body>
-  
 </html>
